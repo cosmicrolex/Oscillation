@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const InteractiveBrochureDownload = ({ 
   
-  brochurePath = "oscillation/public/Files/Oscillation 2k25 Brochure.pdf",
+   brochurePath = "/Files/Oscillation 2k25 Brochure.pdf",
   onError = () => {handleDownloadError}
 }) => {
   const [animationState, setAnimationState] = useState("initial");
