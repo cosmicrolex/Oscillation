@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import Faqs from './Faqs';
-import coderelay2 from '..//assets/Code Relay 2.0.jpg';
-import hack from '..//assets/hackathon.jpg';
-import valo from '..//assets/valorant.jpg';
-import treasure from '..//assets/treasure hunt.jpg';
-import proj from '..//assets/project presentation.jpg';
-import bgmi from '..//assets/bgmi.jpg';
-import carrom from '..//assets/carrom.jpg';
-import codeandpray from '..//assets/Code and Pray.jpg';
-import dumbcharades from '..//assets/Dumb Charades.jpg';
-import aivisionary from '..//assets/AI Visionary.jpg';
-import ludo from '..//assets/ludo.jpg';
-<Faqs />
+import coderelay2 from '../assets/Code Relay 2.0.jpg';
+import hack from '../assets/hackathon.jpg';
+import valo from '../assets/valorant.jpg';
+import treasure from '../assets/treasure hunt.jpg';
+import proj from '../assets/project presentation.jpg';
+import bgmi from '../assets/bgmi.jpg';
+import carrom from '../assets/carrom.jpg';
+import codeandpray from '../assets/Code and Pray.jpg';
+import dumbcharades from '../assets/Dumb Charades.jpg';
+import aivisionary from '../assets/AI Visionary.jpg';
+import ludo from '../assets/ludo.jpg';
+import siddhesh from '..//assets/siddhesh.jpeg'
+import pranav from '..//assets/panna.png';
+import kshitij from '..//assets/Kshitij.png';
+import vedant from '..//assets/Vedant.png';
+import devesh from '..//assets/Devesh.png';
+// import deep from '..//assets/deep.png';
+
 const App = () => {
-  // Events data with unique coordinators for each event
+  // Events data with unique coordinators and specific details for each event
   const events = [
     {
       id: "hackathon",
@@ -21,32 +27,69 @@ const App = () => {
       description: "24-hour coding marathon to build innovative solutions for real-world problems.",
       icon: "fas fa-laptop-code",
       image: hack,
-      registrationLink: "https://forms.google.com/your-hackathon-form",
+      registrationLink: "https://unstop.com/o/qOCVa2f?lb=8WkQgyPl&utm_medium=Share&utm_source=shortUrl",
       featured: true,
       eventDate: "2025-04-15T09:00:00", // Set your hackathon date here
       coordinators: [
         { 
-          name: "Raj Sharma", 
-          role: "Lead Coordinator", 
-          image: "/api/placeholder/150/150",
-          email: "raj@gmail.com"
+          name: "Siddhesh Varhadi", 
+          role: "Co-Ordinator", 
+          image: siddhesh,
+          email: "7900164138"
         },
         { 
-          name: "Priya Patel", 
-          role: "Technical Support", 
-          image: "/api/placeholder/150/150",
-          email: "priya@gmail.com" 
-        },
-        { 
-          name: "Arjun Mehta", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "arjun@gmail.com" 
+          name: "Pranav Agarthade", 
+          role: "Co-Ordinator", 
+          image: pranav,
+          email: "8591727736" 
         }
-      ]
+        // { 
+        //   name: "Arjun Mehta", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "arjun@gmail.com" 
+        // }
+      ],
+      // Custom details for Hackathon
+      details: {
+        date: "April 3-4, 2025",
+        time: "9:00 AM - 9:00 AM (24 hours)",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 1, 2025",
+        requirements: "Laptop, charger, valid ID, and pre-installed development tools",
+        teamSize: "3-4 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹25,000" },
+          { place: "2nd Place", amount: "₹15,000" },
+          { place: "3rd Place", amount: "₹10,000" },
+          { place: "Best UI/UX", amount: "₹5,000" }
+        ],
+        skills: ["Problem Solving", "Web/Mobile Development", "API Integration", "Design Thinking", "Team Collaboration"],
+        timeline: [
+          { date: "March 1, 2025", event: "Registration Opens" },
+          { date: "April 1, 2025", event: "Registration Closes" },
+          { date: "April 10, 2025", event: "Theme Announcement & Team Confirmation" },
+          { date: "April 15, 2025 9:00 AM", event: "Hackathon Begins" },
+          { date: "April 16, 2025 9:00 AM", event: "Coding Ends" },
+          { date: "April 16, 2025 10:00 AM - 1:00 PM", event: "Project Presentations" },
+          { date: "April 16, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        // contacts: {
+        //   phone: "+91 9876543210",
+        //   email: "aisac.vpp@gmail.com",
+        //   website: "www.college-hackathon.com"
+        // },
+        rules: [
+          "Participants will receive an AI/ML-related problem statement and must create a project to solve it.",
+          "Participants can work individually or in teams, and each member must contribute actively.",
+          "Projects will be evaluated based on innovation, accuracy, and feasibility.",
+          "Open-source libraries and frameworks are allowed, but external consultation or AI assistance is not permitted.",
+          "Code must be clean and structured; poor code structure will reduce scores."
+        ]        
+      }
     },
     {
-      id: "hugsAndBugs",
+      id: "coderelay2",
       title: "Code Relay 2.0",
       description: "Debug challenging code and solve complex programming puzzles in this exciting competition.",
       icon: "fas fa-bug",
@@ -54,1115 +97,1131 @@ const App = () => {
       registrationLink: "https://forms.gle/dsuTCD5K9r3Jt7T19",
       coordinators: [
         { 
-          name: "Deep Mohite", 
-          role: "Lead Coordinator", 
+          name: "Aryan Fursule", 
+          role: "Co-Ordinator", 
           image: "/api/placeholder/150/150",
-          email: "deep@gmail.com"
+          email: "9321618971"
         },
         { 
-          name: "Suyash Lokahare", 
+          name: "Deep Mohite", 
           role: "Technical Support", 
           image: "/api/placeholder/150/150",
-          email: "suyash@gmail.com" 
+          email: "9987999748" 
         },
-        { 
-          name: "Siddhesh Varhadi", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "sid@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 3, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "2-4 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "Participants must complete the assigned code to be eligible to win the event.",
+          "Team members can switch coding tasks among themselves until the code is completed or the time limit is reached.",
+          "A rotation order must be followed, and code handoffs must be seamless.",
+          "For Python-related problems, the time limit will be adjusted to account for shorter code length.",
+          "Teams will be evaluated based on team collaboration, time management, code quality, and code functionality.",
+          "If two teams have the same score, the team with fewer member switches will win. If the tie persists, a new problem statement will be issued.",
+          "Each team member must actively participate to ensure fairness and collaboration.",
+          "Each team member's time will be balanced based on the overall time limit.",
+          "Teams that fail to complete the code within the time limit will be ranked based on progress and passing criteria.",
+          "Teams are only allowed to use the provided tools and resources; external help, pre-written code, internet, or mobile usage is strictly prohibited.",
+          "Submitted code will be reviewed for quality, standards, and originality.",
+          "Participants must maintain decorum and follow ethical practices. Misconduct will result in immediate disqualification."
+        ]        
+      }
     },
     
     {
-      id: "chess",
+      id: "valorant",
       title: "Valorant",
-      description: "Strategic battle of minds in this classic game of chess.",
+      description: "Form a team, strategize, and showcase your tactical skills in this high-stakes Valorant battle.",
       icon: "fas fa-chess",
       image: valo,
       registrationLink: "https://forms.gle/neyAbdGGuNa7BKHg8",
       coordinators: [
         { 
-          name: "Vishal Kumar", 
-          role: "Lead Coordinator", 
+          name: "Suyash Lohakare", 
+          role: "Co-Ordinator", 
           image: "/api/placeholder/150/150",
-          email: "vishal@gmail.com"
+          email: "9870219100"
         },
         { 
-          name: "Neha Singh", 
-          role: "Chess Master", 
+          name: "Sarthak Labdhe", 
+          role: "Co-Ordinator", 
           image: "/api/placeholder/150/150",
-          email: "neha@gmail.com" 
+          email: "9324341287" 
         },
-        { 
-          name: "Aditya Joshi", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "aditya@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Aditya Joshi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "aditya@gmail.com" 
+        // }
+      ],
+      // Custom details for Valorant tournament
+      details: {
+        date: "April 4, 2025",
+        time: "11:00 AM - 6:00 PM",
+        venue: "E-Sports Arena, CCC Building",
+        registrationDeadline: "April 8, 2025",
+        requirements: "Valorant account (minimum level 20), Discord for communication",
+        teamSize: "5 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹15,000" },
+          { place: "2nd Place", amount: "₹8,000" },
+          { place: "3rd Place", amount: "₹5,000" },
+          { place: "MVP", amount: "₹2,000" }
+        ],
+        skills: ["Team Coordination", "Strategy", "Aim", "Game Sense", "Communication"],
+        timeline: [
+          { date: "March 15, 2025", event: "Registration Opens" },
+          { date: "April 8, 2025", event: "Registration Closes" },
+          { date: "April 10, 2025", event: "Team Seeding Announcement" },
+          { date: "April 12, 2025", event: "Group Stage Matches" },
+          { date: "April 13, 2025", event: "Quarter Finals, Semi Finals, and Finals" },
+          { date: "April 13, 2025", event: "Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543212",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-esports.com"
+        },
+        rules: [
+          "The competition consists of 4 rounds: TDM, Quarterfinals, Semifinals, and Finals.",
+          "Matches follow a 5v5 standard format.",
+          "Standard Valorant rules apply, and cheating will result in immediate disqualification.",
+          "In case of a tie, a sudden death round will decide the winner."
+        ]        
+      }
     },
-
     {
       id: "treasureHunt",
       title: "Treasure Hunt",
       description: "Follow the clues and solve riddles in this tech-themed treasure hunt.",
-      icon: "fas fa-map-marked-alt",
+      icon: "fas fa-chess",
       image: treasure,
-      registrationLink: " https://forms.gle/VRF3mgaMZWJrwhHV6",
+      registrationLink: "https://forms.gle/VRF3mgaMZWJrwhHV6",
       coordinators: [
         { 
-          name: "Rohit Verma", 
-          role: "Hunt Master", 
-          image: "/api/placeholder/150/150",
-          email: "rohit@gmail.com"
+          name: "Devesh Amberkar", 
+          role: "Co-Ordinator", 
+          image: devesh,
+          email: "9898153919"
         },
         { 
-          name: "Ananya Desai", 
-          role: "Clue Designer", 
-          image: "/api/placeholder/150/150",
-          email: "ananya@gmail.com" 
+          name: "Vedant Kadam", 
+          role: "Co-Ordinator", 
+          image: vedant,
+          email: "84220 28339" 
         },
-        { 
-          name: "Karan Shah", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "karan@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Aditya Joshi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "aditya@gmail.com" 
+        // }
+      ],
+      // Custom details for Valorant tournament
+      details: {
+        date: "April 3, 2025",
+        time: "11:00 AM - 6:00 PM",
+        venue: "E-Sports Arena, CCC Building",
+        registrationDeadline: "April 8, 2025",
+        requirements: "Valorant account (minimum level 20), Discord for communication",
+        teamSize: "5 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹15,000" },
+          { place: "2nd Place", amount: "₹8,000" },
+          { place: "3rd Place", amount: "₹5,000" },
+          { place: "MVP", amount: "₹2,000" }
+        ],
+        skills: ["Team Coordination", "Strategy", "Aim", "Game Sense", "Communication"],
+        timeline: [
+          { date: "March 15, 2025", event: "Registration Opens" },
+          { date: "April 8, 2025", event: "Registration Closes" },
+          { date: "April 10, 2025", event: "Team Seeding Announcement" },
+          { date: "April 12, 2025", event: "Group Stage Matches" },
+          { date: "April 13, 2025", event: "Quarter Finals, Semi Finals, and Finals" },
+          { date: "April 13, 2025", event: "Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543212",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-esports.com"
+        },
+        rules: [
+          "Each team will consist of 4 players.",
+          "Correct clues will lead to the next stage, while penalties apply for incorrect answers.",
+          "The fastest team to complete the hunt wins."
+        ]        
+      }
     },
     {
       id: "projectPresentation",
-      title: "Project Presentation",
+      title: "Project Exibition",
       description: "Showcase your innovative projects and get feedback from industry experts.",
-      icon: "fas fa-project-diagram",
+      icon: "fas fa-bug",
       image: proj,
       registrationLink: "https://forms.gle/rvRVM6ms1QtwZZFy5",
       coordinators: [
         { 
-          name: "Vikram Malhotra", 
-          role: "Industry Expert", 
-          image: "/api/placeholder/150/150",
-          email: "vikram@gmail.com"
+          name: "Kshitij Tapekar", 
+          role: "Co-Ordinator", 
+          image: kshitij,
+          email: "7700021900"
         },
         { 
-          name: "Shreya Gupta", 
-          role: "Presentation Coach", 
+          name: "Sarthak Labdhe", 
+          role: "Co-Ordinator", 
           image: "/api/placeholder/150/150",
-          email: "shreya@gmail.com" 
+          email: "9324341287" 
         },
-        { 
-          name: "Rahul Khanna", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "rahul@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 3, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "4 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "Each participant gets 10 minutes to present, followed by a Q&A session.",
+          "Projects will be evaluated based on innovation, technical execution, and presentation quality.",
+          "Winners will be determined based on judges' scores."
+        ]        
+      }
     },
     {
-      id: "webDevContest",
+      id: "bgmi",
       title: "BGMI",
-      description: "Create stunning websites with modern technologies in this development challenge.",
-      icon: "fas fa-code",
+      description: "Battle it out in this fast-paced BGMI showdown where strategy and precision determine the winner.",
+      icon: "fas fa-bug",
       image: bgmi,
       registrationLink: "https://forms.gle/jLp2Z7BC4fPhYddy9",
       coordinators: [
         { 
-          name: "Aarav Choudhury", 
-          role: "Frontend Expert", 
-          image: "/api/placeholder/150/150",
-          email: "aarav@gmail.com"
+          name: "Siddhesh Varhadi", 
+          role: "Co-Ordinator", 
+          image: siddhesh,
+          email: "7900164138"
         },
         { 
-          name: "Ishita Reddy", 
-          role: "UX/UI Specialist", 
-          image: "/api/placeholder/150/150",
-          email: "ishita@gmail.com" 
+          name: "Pranav Agarthade", 
+          role: "Co-Ordinator", 
+          image: pranav,
+          email: "8591727736" 
         },
-        { 
-          name: "Dhruv Kapoor", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "dhruv@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 4, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "4 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "The competition features 10 teams in a battleground.",
+          "Maps include Erangel and others.",
+          "The last team standing wins.",
+          "Any form of cheating results in immediate disqualification."
+        ]        
+      }
     },
     {
-      id: "botBattle",
+      id: "carromClash",
       title: "Carrom Clash",
-      description: "Design and code your own bot to compete in various challenges and games.",
-      icon: "fas fa-robot",
+      description: "Sharpen your aim and strategy in this exciting game of carrom where precision meets skill.",
+      icon: "fas fa-bug",
       image: carrom,
-      registrationLink: "https://forms.google.com/your-botbattle-form",
+      registrationLink: "https://forms.gle/xXV4sLuk3vT2rrgi6",
       coordinators: [
         { 
-          name: "Varun Nair", 
-          role: "AI Specialist", 
-          image: "/api/placeholder/150/150",
-          email: "varun@gmail.com"
+          name: "Siddhesh Varhadi", 
+          role: "Co-Ordinator", 
+          image: siddhesh,
+          email: "7900164138"
         },
         { 
-          name: "Meera Iyer", 
-          role: "Bot Developer", 
-          image: "/api/placeholder/150/150",
-          email: "meera@gmail.com" 
+          name: "Pranav Agarthade", 
+          role: "Co-Ordinator", 
+          image: pranav,
+          email: "8591727736" 
         },
-        { 
-          name: "Nikhil Menon", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "nikhil@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 3, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "2 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "Each team will consist of two players, and standard carrom rules apply.",
+          "The first team to reach the required points wins, with queen capture and cover rules in effect.",
+          "Touching the opponent’s piece results in a penalty, and incorrect strikes lead to a turn loss.",
+          "In case of a tie, a sudden death round will decide the winner."
+        ]        
+      }
     },
     {
-      id: "Code and Pray",
-      title: "Code and Pray",
-      description: "Test your knowledge of technology, programming, and computer science history.",
-      icon: "fas fa-question-circle",
+      id: "codeAndPray",
+      title: "Code And Pray",
+      description: "Put your coding instincts to the test as you write without sight—only faith in your skills will guide you to victory.",
+      icon: "fas fa-bug",
       image: codeandpray,
       registrationLink: "https://forms.gle/HekrvhzAaQZLV8Jv7",
       coordinators: [
         { 
-          name: "Aryan Saxena", 
-          role: "Quiz Master", 
+          name: "Omkar Shingote", 
+          role: "Co-Ordinator", 
           image: "/api/placeholder/150/150",
-          email: "aryan@gmail.com"
+          email: "9594231594"
         },
         { 
-          name: "Tanvi Agarwal", 
-          role: "Question Designer", 
+          name: "Urvi Turbekar", 
+          role: "Co-Ordinator", 
           image: "/api/placeholder/150/150",
-          email: "tanvi@gmail.com" 
+          email: "7738612080" 
         },
-        { 
-          name: "Kunal Chawla", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "kunal@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 4, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "1 member per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "Participants will be given a webpage design to replicate using HTML and CSS, with the output hidden until the timer ends.",
+          "Coding must be done on the provided platform, and the use of frameworks or external libraries is not allowed.",
+          "Projects will be evaluated based on accuracy, code quality, and completion.",
+          "A fixed time limit will be provided, and late submissions will not be accepted.",
+          "Submitted code will be reviewed for adherence to coding standards."
+        ]         
+      }
     },
-    
     {
-      id: "Dumb Charades",
+      id: "dumbCharades",
       title: "Dumb Charades",
-      description: "Test your knowledge of technology, programming, and computer science history.",
-      icon: "fas fa-question-circle",
+      description: "Unleash your acting skills in this classic game where gestures speak louder than words.",
       image: dumbcharades,
       registrationLink: "https://forms.gle/mEgy3na9CngqqKFw5",
       coordinators: [
         { 
-          name: "Aryan Saxena", 
-          role: "Quiz Master", 
-          image: "/api/placeholder/150/150",
-          email: "aryan@gmail.com"
+          name: "Siddhesh Varhadi", 
+          role: "Co-Ordinator", 
+          image: siddhesh,
+          email: "7900164138"
         },
         { 
-          name: "Tanvi Agarwal", 
-          role: "Question Designer", 
-          image: "/api/placeholder/150/150",
-          email: "tanvi@gmail.com" 
+          name: "Pranav Agarthade", 
+          role: "Co-Ordinator", 
+          image: pranav,
+          email: "8591727736" 
         },
-        { 
-          name: "Kunal Chawla", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "kunal@gmail.com" 
-        }
-
-      ]
-      
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 4, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "3 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "Each team will consist of 3 members: one person will act, and two will guess.",
+          "Each round has a time limit of 60 seconds.",
+          "No verbal or written communication is allowed, and the use of props is prohibited.",
+          "Correct answers earn points, and the team with the highest score wins."
+        ]        
+      }
     },
-
-{
-      id: "aiv",
+    {
+      id: "aiVisionary",
       title: "AI Visionary",
-      description: "Test your knowledge of technology, programming, and computer science history.",
-      icon: "fas fa-question-circle",
+      description: "Dive into the future with AI-driven challenges that test your technical foresight.",
+      icon: "fas fa-bug",
       image: aivisionary,
       registrationLink: "https://forms.gle/kscpDreUV9N8EK4cA",
       coordinators: [
         { 
-          name: "Aryan Saxena", 
-          role: "Quiz Master", 
-          image: "/api/placeholder/150/150",
-          email: "aryan@gmail.com"
+          name: "Siddhesh Varhadi", 
+          role: "Co-Ordinator", 
+          image: siddhesh,
+          email: "7900164138"
         },
         { 
-          name: "Tanvi Agarwal", 
-          role: "Question Designer", 
-          image: "/api/placeholder/150/150",
-          email: "tanvi@gmail.com" 
+          name: "Pranav Agarthade", 
+          role: "Co-Ordinator", 
+          image: pranav,
+          email: "8591727736" 
         },
-        { 
-          name: "Kunal Chawla", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "kunal@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 4, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "1 member per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "Participants will be given a creative task to generate an image using AI tools, aligning with the provided theme or concept.",
+          "After generating the image, participants must create an animated video based on it, highlighting the theme and creative process.",
+          "Projects will be evaluated based on creativity, relevance, and technical execution.",
+          "A fixed time limit will be provided for both image generation and video creation.",
+          "Use of copyrighted or offensive content is prohibited, and ethical AI guidelines must be followed.",
+          "Files must be submitted in specified formats (PNG, MP4, etc.), and late submissions will not be considered."
+        ]        
+      }
     },
     {
-      id: "quizNight",
-      title: "Ludo",
-      description: "Test your knowledge of technology, programming, and computer science history.",
-      icon: "fas fa-question-circle",
+      id: "ludo",
+      title: "Ludo Tech",
+      description: "Combine strategy and luck in this engaging Ludo challenge.",
+      icon: "fas fa-bug",
       image: ludo,
       registrationLink: "https://forms.gle/oSL8hcTSMNp3JHkR9",
       coordinators: [
         { 
-          name: "Aryan Saxena", 
-          role: "Quiz Master", 
-          image: "/api/placeholder/150/150",
-          email: "aryan@gmail.com"
+          name: "Siddhesh Varhadi", 
+          role: "Co-Ordinator", 
+          image: siddhesh,
+          email: "7900164138"
         },
         { 
-          name: "Tanvi Agarwal", 
-          role: "Question Designer", 
-          image: "/api/placeholder/150/150",
-          email: "tanvi@gmail.com" 
+          name: "Pranav Agarthade", 
+          role: "Co-Ordinator", 
+          image: pranav,
+          email: "8591727736" 
         },
-        { 
-          name: "Kunal Chawla", 
-          role: "Event Manager", 
-          image: "/api/placeholder/150/150",
-          email: "kunal@gmail.com" 
-        }
-      ]
+        // { 
+        //   name: "Siddhesh Varhadi", 
+        //   role: "Event Manager", 
+        //   image: "/api/placeholder/150/150",
+        //   email: "sid@gmail.com" 
+        // }
+      ],
+      // Custom details for Code Relay 2.0
+      details: {
+        date: "April 4, 2025",
+        time: "10:00 AM - 2:00 PM",
+        venue: "Will be Updated on the WhatsApp Group",
+        registrationDeadline: "April 5, 2025",
+        requirements: "Knowledge of Java/Python/C++",
+        teamSize: "4 members per team",
+        prizes: [
+          { place: "1st Place", amount: "₹10,000" },
+          { place: "2nd Place", amount: "₹7,000" },
+          { place: "3rd Place", amount: "₹5,000" }
+        ],
+        skills: ["Debugging", "Problem Solving", "Algorithms", "Code Optimization", "Time Management"],
+        timeline: [
+          { date: "March 20, 2025", event: "Registration Opens" },
+          { date: "April 5, 2025", event: "Registration Closes" },
+          { date: "April 8, 2025", event: "Selected Teams Notification" },
+          { date: "April 10, 2025 10:00 AM", event: "Round 1: Bug Hunt" },
+          { date: "April 10, 2025 12:00 PM", event: "Round 2: Code Relay" },
+          { date: "April 10, 2025 2:00 PM", event: "Results & Prize Distribution" }
+        ],
+        contacts: {
+          phone: "+91 9876543211",
+          email: "aisac.vpp@gmail.com",
+          website: "www.college-coderelay.com"
+        },
+        rules: [
+          "The game will be played on a human-sized Ludo board, where players roll dice to move.",
+          "Landing on a safe spot triggers a tech riddle; correct answers keep players safe, while wrong answers result in penalties.",
+          "The first team to finish wins."
+        ]        
+      }
     }
-   
   ];
 
-  // State for hovering effect and showing event details
-  const [hoveredEvent, setHoveredEvent] = useState(null);
+  // State for the event details modal
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [showEventDetails, setShowEventDetails] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  // State for scroll position
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
+  // State for active section in modal
+  const [activeSection, setActiveSection] = useState('event-details');
 
-  // Calculate time left for hackathon
+  // Function to open the modal with the selected event
+  const openEventDetails = (event) => {
+    // Save current scroll position before opening modal
+    setScrollPosition(window.pageYOffset);
+    setSelectedEvent(event);
+    setIsModalOpen(true);
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+    // Reset active section
+    setActiveSection('event-details');
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    // Re-enable body scrolling
+    document.body.style.overflow = 'auto';
+    // Restore scroll position
+    setTimeout(() => {
+      window.scrollTo(0, scrollPosition);
+    }, 0);
+  };
+
+  // Set up countdown functionality for featured events
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
   useEffect(() => {
-    const hackathonEvent = events.find(event => event.id === "hackathon");
-    if (!hackathonEvent || !hackathonEvent.eventDate) return;
-
-    const calculateTimeLeft = () => {
-      const difference = new Date(hackathonEvent.eventDate) - new Date();
+    const featuredEvent = events.find(event => event.featured);
+    if (featuredEvent && featuredEvent.eventDate) {
+      const timer = setInterval(() => {
+        const eventDate = new Date("April 3, 2025 08:00:00");
+        const now = new Date().getTime();
+        const difference = eventDate - now;
+        
+        if (difference > 0) {
+          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((difference / (1000 * 60)) % 60);
+          const seconds = Math.floor((difference / 1000) % 60);
+          
+          setTimeLeft({
+            days,
+            hours,
+            minutes,
+            seconds
+          });
+        } else {
+          clearInterval(timer);
+          setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        }
+      }, 1000);
       
-      if (difference > 0) {
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60)
-        };
-      }
-      return null;
-    };
-
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    setTimeLeft(calculateTimeLeft());
-    
-    return () => clearInterval(timer);
+      return () => clearInterval(timer);
+    }
   }, [events]);
 
-  // Handle click to show event details
-  const handleEventClick = (eventId) => {
-    setSelectedEvent(eventId);
-    setShowEventDetails(true);
-    // Scroll to top when showing event details
-    window.scrollTo(0, 0);
-  };
-
-  // Handle back button click
-  const handleBackClick = () => {
-    setShowEventDetails(false);
-    setSelectedEvent(null);
-  };
-
-  // Added event listener for browser back button
+  // Close modal when clicking outside or pressing Escape
   useEffect(() => {
-    const handlePopState = () => {
-      if (showEventDetails) {
-        setShowEventDetails(false);
-        setSelectedEvent(null);
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
       }
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, [showEventDetails]);
+    const handleOutsideClick = (e) => {
+      if (isModalOpen && e.target.classList.contains('modal-overlay')) {
+        closeModal();
+      }
+    };
 
-  return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {!showEventDetails ? (
-        <EventsSection 
-          events={events} 
-          hoveredEvent={hoveredEvent} 
-          setHoveredEvent={setHoveredEvent} 
-          handleEventClick={handleEventClick}
-          timeLeft={timeLeft}
-        />
-      ) : (
-        <EventDetailsPage 
-          eventId={selectedEvent} 
-          events={events}
-          handleBackClick={handleBackClick} 
-          timeLeft={selectedEvent === "hackathon" ? timeLeft : null}
-        />
-      )}
-    </div>
-  );
-};
-
-// Events Section Component
-const EventsSection = ({ events, hoveredEvent, setHoveredEvent, handleEventClick, timeLeft }) => {
-  // Find the hackathon event
-  const hackathonEvent = events.find(event => event.id === "hackathon");
-  // Filter out the hackathon to display separately
-  const regularEvents = events.filter(event => event.id !== "hackathon");
-
-  // Countdown display component
-  const CountdownDisplay = ({ timeData }) => {
-    if (!timeData) return <div className="text-yellow-300 font-bold">Event coming soon!</div>;
+    window.addEventListener('keydown', handleEscape);
+    window.addEventListener('click', handleOutsideClick);
     
-    return (
-      <div className="grid grid-cols-4 gap-2 mt-3">
-        {Object.entries(timeData).map(([unit, value]) => (
-          <div key={unit} className="flex flex-col items-center">
-            <div className="bg-purple-700 text-white px-2 py-1 rounded-md text-lg font-bold w-12 text-center">
-              {value}
-            </div>
-            <div className="text-xs text-gray-300 uppercase mt-1">{unit}</div>
-          </div>
-        ))}
-      </div>
-    );
-  };
+    return () => {
+      window.removeEventListener('keydown', handleEscape);
+      window.removeEventListener('click', handleOutsideClick);
+    };
+  }, [isModalOpen]);
+
+  // Track scroll position within the modal to update active section
+  useEffect(() => {
+    if (isModalOpen) {
+      const handleScroll = () => {
+        const sections = ['event-details', 'prize-pool', 'rules', 'timeline'];
+        
+        for (let section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            // If the top of the element is near the top of the viewport
+            if (rect.top <= 200) {
+              setActiveSection(section);
+            }
+          }
+        }
+      };
+      
+      const modalContent = document.querySelector('.modal-content');
+      if (modalContent) {
+        modalContent.addEventListener('scroll', handleScroll);
+        return () => modalContent.removeEventListener('scroll', handleScroll);
+      }
+    }
+  }, [isModalOpen]);
+
+  // Add lazy loading to improve performance
+  useEffect(() => {
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[data-src]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    } else {
+      // Fallback for browsers that don't support lazy loading
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
-    <section id="hackathonEvents" data-name="events-section" className="py-20 bg-slate-900 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-  {/* Particle Network Effect */}
-  <div className="absolute inset-0">
-    <div className="particles-container absolute inset-0" style={{
-      background: "radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.03) 0%, rgba(16, 16, 25, 0) 70%)"
-    }}></div>
-    <style jsx>{`
-      @keyframes particleAnimation {
-        0% { transform: translateY(0) translateX(0); }
-        25% { transform: translateY(-10px) translateX(10px); }
-        50% { transform: translateY(0) translateX(0); }
-        75% { transform: translateY(10px) translateX(-10px); }
-        100% { transform: translateY(0) translateX(0); }
-      }
-      .particles-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: 
-          radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 1px, transparent 1px),
-          radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.15) 1px, transparent 1px),
-          radial-gradient(circle at 50% 60%, rgba(59, 130, 246, 0.15) 1px, transparent 1px),
-          radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.15) 1px, transparent 1px),
-          radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.15) 1px, transparent 1px);
-        background-size: 60px 60px;
-        animation: particleAnimation 30s infinite ease-in-out;
-      }
-    `}</style>
-  </div>
-
-  {/* Dynamic Circuit Board with Flow Effect */}
-  <div className="absolute inset-0 opacity-40">
-    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="rgba(139, 92, 246, 0.5)" />
-          <stop offset="50%" stopColor="rgba(59, 130, 246, 0.5)" />
-          <stop offset="100%" stopColor="rgba(16, 185, 129, 0.5)" />
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="1" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
-      
-      {/* Horizontal Lines */}
-      <path d="M10,20 H90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="4s" repeatCount="indefinite" />
-      </path>
-      <path d="M10,40 H90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="6s" repeatCount="indefinite" />
-      </path>
-      <path d="M10,60 H90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="5s" repeatCount="indefinite" />
-      </path>
-      <path d="M10,80 H90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="7s" repeatCount="indefinite" />
-      </path>
-      
-      {/* Vertical Lines */}
-      <path d="M20,10 V90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="8s" repeatCount="indefinite" />
-      </path>
-      <path d="M40,10 V90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="9s" repeatCount="indefinite" />
-      </path>
-      <path d="M60,10 V90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="7s" repeatCount="indefinite" />
-      </path>
-      <path d="M80,10 V90" stroke="url(#circuitGradient)" strokeWidth="0.2" fill="none" filter="url(#glow)">
-        <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="10s" repeatCount="indefinite" />
-      </path>
-      
-      {/* Connection Nodes */}
-      <circle cx="20" cy="20" r="1" fill="#6366F1" filter="url(#glow)">
-        <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="40" cy="40" r="1" fill="#8B5CF6" filter="url(#glow)">
-        <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="60" cy="60" r="1" fill="#3B82F6" filter="url(#glow)">
-        <animate attributeName="opacity" values="0.3;1;0.3" dur="5s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="80" cy="80" r="1" fill="#10B981" filter="url(#glow)">
-        <animate attributeName="opacity" values="0.3;1;0.3" dur="6s" repeatCount="indefinite" />
-      </circle>
-      
-      {/* Data Flow */}
-      <circle cx="20" cy="20" r="0.5" fill="#FFFFFF" filter="url(#glow)">
-        <animate attributeName="cx" values="20;40;60;80" dur="3s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="20;40;60;80" dur="3s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="80" cy="20" r="0.5" fill="#FFFFFF" filter="url(#glow)">
-        <animate attributeName="cx" values="80;60;40;20" dur="4s" repeatCount="indefinite" />
-        <animate attributeName="cy" values="20;40;60;80" dur="4s" repeatCount="indefinite" />
-      </circle>
-    </svg>
-  </div>
-  
-  {/* 3D-looking Holographic AI Visualization */}
-  <div className="absolute right-0 top-0 w-96 h-96 opacity-20">
-    <svg viewBox="0 0 200 200" className="w-full h-full">
-      <defs>
-        <radialGradient id="aiGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-          <stop offset="0%" stopColor="rgba(139, 92, 246, 0.8)" />
-          <stop offset="100%" stopColor="rgba(139, 92, 246, 0)" />
-        </radialGradient>
-      </defs>
-      
-      {/* Brain-like Structure */}
-      <g className="transform translate-x-100 translate-y-100">
-        <path d="M80,60 C100,40 120,40 140,60 C160,80 160,100 140,120 C120,140 100,140 80,120 C60,100 60,80 80,60 Z" 
-              fill="none" stroke="rgba(139, 92, 246, 0.6)" strokeWidth="0.5" filter="url(#glow)">
-          <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="30s" repeatCount="indefinite" />
-        </path>
-        
-        {/* Neural Network Connections */}
-        <g>
-          <line x1="70" y1="70" x2="130" y2="70" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="0.3">
-            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
-          </line>
-          <line x1="70" y1="100" x2="130" y2="100" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="0.3">
-            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
-          </line>
-          <line x1="70" y1="130" x2="130" y2="130" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="0.3">
-            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="5s" repeatCount="indefinite" />
-          </line>
+    <div className="min-h-screen bg-gray-100">
+      {/* Header - Updated with purple theme */}
+      <header className="bg-purple-800 text-white py-8">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-center animate__animated animate__fadeIn">Tech Fest 2025</h1>
+          <p className="text-xl text-center mt-2 animate__animated animate__fadeIn animate__delay-1s">April 10-20, 2025 • An Immersive Technical Experience</p>
           
-          <line x1="70" y1="70" x2="70" y2="130" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="0.3">
-            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
-          </line>
-          <line x1="100" y1="70" x2="100" y2="130" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="0.3">
-            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="5s" repeatCount="indefinite" />
-          </line>
-          <line x1="130" y1="70" x2="130" y2="130" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="0.3">
-            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
-          </line>
-        </g>
-        
-        {/* Neural Nodes */}
-        <circle cx="70" cy="70" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="100" cy="70" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="130" cy="70" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="4s" repeatCount="indefinite" />
-        </circle>
-        
-        <circle cx="70" cy="100" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="100" cy="100" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="4s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="130" cy="100" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" />
-        </circle>
-        
-        <circle cx="70" cy="130" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="4s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="100" cy="130" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="130" cy="130" r="2" fill="rgba(139, 92, 246, 0.8)">
-          <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" />
-        </circle>
-      </g>
-    </svg>
-  </div>
-  
-  {/* Advanced Robotics Gear System */}
-  <div className="absolute left-10 bottom-10 w-64 h-64 opacity-30">
-    <svg viewBox="0 0 200 200" className="w-full h-full filter drop-shadow-lg">
-      {/* Main Gear */}
-      <g className="animate-spin" style={{animationDuration: "20s", transformOrigin: "center"}}>
-        <path d="M100,20 L105,35 L120,25 L115,40 L135,35 L125,50 L145,50 L130,60 L150,65 L130,70 L145,80 L125,80 L135,95 L115,90 L120,105 L105,95 L100,110 L95,95 L80,105 L85,90 L65,95 L75,80 L55,80 L70,70 L50,65 L70,60 L55,50 L75,50 L65,35 L85,40 L80,25 L95,35 Z" 
-             fill="rgba(16, 185, 129, 0.6)" stroke="rgba(16, 185, 129, 0.8)" strokeWidth="0.5" />
-             <circle cx="100" cy="100" r="15" fill="rgba(0, 0, 0, 0.5)" stroke="rgba(16, 185, 129, 0.8)" strokeWidth="0.5" />
-             
-             {/* Dynamic teeth lighting */}
-             <circle cx="100" cy="100" r="15" fill="rgba(0, 0, 0, 0.5)" stroke="rgba(16, 185, 129, 0.8)" strokeWidth="0.5" />
-             
-             {/* Dynamic teeth lighting */}
-             <circle cx="100" cy="20" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="135" cy="35" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="145" cy="50" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="150" cy="65" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="145" cy="80" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="135" cy="95" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="120" cy="105" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="100" cy="110" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="80" cy="105" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="65" cy="95" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="55" cy="80" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="50" cy="65" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="55" cy="50" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="65" cy="35" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite" />
-             </circle>
-             <circle cx="80" cy="25" r="1" fill="#10B981">
-               <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
-             </circle>
-           </g>
-           
-           {/* Secondary Gears */}
-           <g className="animate-spin" style={{animationDuration: "12s", transformOrigin: "150px 50px", animationDirection: "reverse"}}>
-             <path d="M150,30 L153,37 L160,32 L158,40 L167,37 L162,45 L172,45 L165,50 L175,52 L165,55 L172,60 L162,60 L167,68 L158,65 L160,73 L153,68 L150,75 L147,68 L140,73 L142,65 L133,68 L138,60 L128,60 L135,55 L125,52 L135,50 L128,45 L138,45 L133,37 L142,40 L140,32 L147,37 Z" 
-                   fill="rgba(99, 102, 241, 0.6)" stroke="rgba(99, 102, 241, 0.8)" strokeWidth="0.5" />
-             <circle cx="150" cy="50" r="8" fill="rgba(0, 0, 0, 0.5)" stroke="rgba(99, 102, 241, 0.8)" strokeWidth="0.5" />
-           </g>
-           
-           <g className="animate-spin" style={{animationDuration: "10s", transformOrigin: "50px 150px", animationDirection: "reverse"}}>
-             <path d="M50,130 L53,137 L60,132 L58,140 L67,137 L62,145 L72,145 L65,150 L75,152 L65,155 L72,160 L62,160 L67,168 L58,165 L60,173 L53,168 L50,175 L47,168 L40,173 L42,165 L33,168 L38,160 L28,160 L35,155 L25,152 L35,150 L28,145 L38,145 L33,137 L42,140 L40,132 L47,137 Z" 
-                   fill="rgba(239, 68, 68, 0.6)" stroke="rgba(239, 68, 68, 0.8)" strokeWidth="0.5" />
-             <circle cx="50" cy="150" r="8" fill="rgba(0, 0, 0, 0.5)" stroke="rgba(239, 68, 68, 0.8)" strokeWidth="0.5" />
-           </g>
-           
-           {/* Connection Lines */}
-           <line x1="85" y1="115" x2="125" y2="75" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" strokeDasharray="2,2" />
-           <line x1="70" y1="130" x2="35" y2="165" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" strokeDasharray="2,2" />
-           <line x1="130" y1="70" x2="165" y2="35" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" strokeDasharray="2,2" />
-         </svg>
-       </div>
-     </div>
-
-
-
-      {/* Content Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <h2 data-name="events-title" className="text-4xl font-bold text-white mb-4">
-            Featured Events
-          </h2>
-          <p data-name="events-subtitle" className="text-gray-300">
-            Participate in our exciting events and showcase your skills
-          </p>
-        </div>
-        
-        {/* Featured Hackathon Event - Special Display */}
-        {hackathonEvent && (
-          <div className="mb-12 relative">
-            <div className="absolute -inset-1">
-              <div className="w-full h-full mx-auto bg-gradient-to-r from-purple-600 to-cyan-500 opacity-30 blur-lg"></div>
+          {/* Featured Event Countdown - Updated with purple theme */}
+          {events.find(event => event.featured) && (
+            <div className="mt-8 bg-purple-700 rounded-lg p-6 max-w-3xl mx-auto animate__animated animate__fadeInUp animate__delay-2s shadow-lg transform hover:scale-105 transition-transform duration-300">
+              <h2 className="text-2xl font-bold text-center mb-4">
+                {events.find(event => event.featured)?.title} is Coming Soon!
+              </h2>
+              <div className="flex justify-center space-x-4">
+                <div className="text-center bg-purple-600 p-3 rounded-lg">
+                  <div className="text-3xl font-bold">{timeLeft.days}</div>
+                  <div className="text-sm">Days</div>
+                </div>
+                <div className="text-center bg-purple-600 p-3 rounded-lg">
+                  <div className="text-3xl font-bold">{timeLeft.hours}</div>
+                  <div className="text-sm">Hours</div>
+                </div>
+                <div className="text-center bg-purple-600 p-3 rounded-lg">
+                  <div className="text-3xl font-bold">{timeLeft.minutes}</div>
+                  <div className="text-sm">Minutes</div>
+                </div>
+                <div className="text-center bg-purple-600 p-3 rounded-lg">
+                  <div className="text-3xl font-bold">{timeLeft.seconds}</div>
+                  <div className="text-sm">Seconds</div>
+                </div>
+              </div>
+              <div className="mt-6 text-center">
+                <a 
+                  href={events.find(event => event.featured)?.registrationLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-purple-800 font-bold py-2 px-8 rounded-full hover:bg-purple-100 transition duration-300 animate-pulse"
+                >
+                  Register Now
+                </a>
+              </div>
             </div>
+          )}
+        </div>
+      </header>
+      
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-8">
+        <h2 className="text-3xl font-bold text-center mb-8 text-purple-800 animate__animated animate__fadeIn">Our Events</h2>
+        
+        {/* Back button to navigate to top */}
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-6 bg-purple-800 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-all z-10 animate__animated animate__fadeIn"
+          aria-label="Back to top"
+        >
+          <i className="fas fa-arrow-up"></i>
+        </button>
+        
+        {/* Events Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((event, index) => (
             <div 
-              className="relative overflow-hidden rounded-lg shadow-2xl transition-all duration-300 transform bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-500"
-              style={{ 
-                transform: hoveredEvent === hackathonEvent.id ? 'scale(1.01)' : 'scale(1)',
-              }}
-              onMouseEnter={() => setHoveredEvent(hackathonEvent.id)}
-              onMouseLeave={() => setHoveredEvent(null)}
+              key={event.id} 
+              className="bg-white rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl animate__animated animate__fadeInUp"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="lg:flex">
-                {/* Background Image with Overlay */}
-                <div className="lg:w-1/2 relative">
-                  <div className="absolute inset-0 w-full h-full">
-                    <img 
-                      src={hackathonEvent.image} 
-                      alt={`${hackathonEvent.title} background`}
-                      className="w-full h-full object-cover object-center"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/80 to-blue-900/80"></div>
-                    
-                    {/* Hover Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-tr from-cyan-500/30 to-purple-600/30 transition-opacity duration-300 ${
-                      hoveredEvent === hackathonEvent.id ? 'opacity-100' : 'opacity-0'
-                    }`}></div>
+              <div className="relative overflow-hidden">
+                <img 
+                  src={event.image} 
+                  alt={event.title} 
+                  className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-purple-900 opacity-0 hover:opacity-30 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-purple-800">{event.title}</h3>
+                <p className="text-gray-600 mb-4">{event.description}</p>
+                <div className="mb-4">
+                  <div className="flex items-center text-gray-700">
+                    <i className="far fa-calendar-alt mr-2 text-purple-600"></i>
+                    <span>{event.details.date}</span>
                   </div>
-                  
-                  {/* Hackathon Badge */}
-                  <div className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-purple-800 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                    FLAGSHIP EVENT
+                  <div className="flex items-center text-gray-700 mt-1">
+                    <i className="far fa-clock mr-2 text-purple-600"></i>
+                    <span>{event.details.time}</span>
+                  </div>
+                  <div className="flex items-center text-gray-700 mt-1">
+                    <i className="fas fa-map-marker-alt mr-2 text-purple-600"></i>
+                    <span>{event.details.venue}</span>
                   </div>
                 </div>
-                
-                {/* Card Content */}
-                <div data-name="hackathon-content" className="lg:w-1/2 p-8 relative z-10">
-                  <div className="flex items-center mb-4">
-                    <div data-name="hackathon-icon" className="text-purple-400 text-4xl mr-4">
-                      <i className={hackathonEvent.icon}></i>
-                    </div>
-                    <h3 data-name="hackathon-title" className="text-3xl font-bold text-white">
-                      {hackathonEvent.title}
-                    </h3>
-                  </div>
-                  
-                  <p data-name="hackathon-description" className="text-gray-300 text-lg mb-6">
-                    {hackathonEvent.description}
-                  </p>
-                  
-                  {/* Countdown Timer */}
-                  <div className="mb-6">
-                    <h4 className="text-xl font-semibold text-white mb-2 flex items-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Time Remaining
-                    </h4>
-                    <CountdownDisplay timeData={timeLeft} />
-                  </div>
-                  
-                  {/* Buttons */}
-                  <div className="flex space-x-4">
+                <div className="flex justify-between items-center mt-4">
+                  <span className="text-sm bg-purple-100 text-purple-800 py-1 px-3 rounded-full">
+                    {event.details.teamSize}
+                  </span>
+                  <div className="flex space-x-2">
                     <button 
-                      data-name="hackathon-details-button" 
-                      className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-purple-800 text-white py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center group hover:shadow-lg"
-                      onClick={() => handleEventClick(hackathonEvent.id)}
+                      onClick={() => openEventDetails(event)}
+                      className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 transition duration-300 transform hover:scale-105"
                     >
-                      <span className="relative z-10 font-medium">View Details</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      Details
                     </button>
                     <a 
-                      href={hackathonEvent.registrationLink} 
+                      href={event.registrationLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      data-name="hackathon-register-button" 
-                      className="relative overflow-hidden bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center group hover:shadow-lg"
+                      className="bg-purple-800 text-white font-bold py-1 px-3 rounded hover:bg-purple-700 transition duration-300 transform hover:scale-105"
                     >
-                      <span className="relative z-10 font-medium">Register Now</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      Register
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
-        
-        {/* Regular Events Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {regularEvents.map((event) => (
-            <div 
-              key={event.id} 
-              className="relative overflow-hidden rounded-lg transition-all duration-300 transform" 
-              style={{ 
-                transform: hoveredEvent === event.id ? 'scale(1.03)' : 'scale(1)',
-              }}
-              onMouseEnter={() => setHoveredEvent(event.id)}
-              onMouseLeave={() => setHoveredEvent(null)}
-            >
-              {/* Background Image with Overlay */}
-              <div className="absolute inset-0 w-full h-full">
-                <img 
-                  src={event.image} 
-                  alt={`${event.title} background`}
-                  className="w-full h-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-purple-800/90"></div>
-                
-                {/* Hover Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-tr from-green-500/20 to-purple-600/20 transition-opacity duration-300 ${
-                  hoveredEvent === event.id ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-              </div>
-              
-              {/* Card Content */}
-              <div data-name="event-card" className="event-card p-6 relative z-10">
-                <div data-name="event-icon" className="text-purple-400 text-4xl mb-4">
-                  <i className={event.icon}></i>
-                </div>
-                <h3 data-name="event-title" className="text-xl font-semibold text-white-800 mb-2">
-                  {event.title}
-                </h3>
-                <p data-name="event-description" className="text-white-300">
-                  {event.description}
-                </p>
-                
-                {/* Buttons that appear on hover - Also shown on mobile (no hover) */}
-                <div className={`transition-all duration-300 mt-4 flex space-x-3 sm:${
-                  hoveredEvent === event.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                } opacity-100 sm:flex-row flex-col sm:space-x-3 sm:space-y-0 space-y-2`}>
-                  <button 
-                    data-name="event-details-button" 
-                    className="relative overflow-hidden bg-white text-gray-800 py-2 px-5 rounded-md transition-all duration-300 flex items-center justify-center group"
-                    onClick={() => handleEventClick(event.id)}
-                  >
-                    <span className="relative z-10 font-medium">Details</span>
-                    <span className="absolute bottom-0 left-0 w-full h-1 bg-purple-500 transition-all duration-300 group-hover:h-full group-hover:opacity-20"></span>
-                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </button>
-                  <a 
-                    href={event.registrationLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    data-name="event-register-button" 
-                    className="relative overflow-hidden bg-white text-gray-800 py-2 px-5 rounded-md transition-all duration-300 flex items-center justify-center group"
-                  >
-                    <span className="relative z-10 font-medium">Register</span>
-                    <span className="absolute bottom-0 left-0 w-full h-1 bg-green-500 transition-all duration-300 group-hover:h-full group-hover:opacity-20"></span>
-                    <span className="absolute bottom-0 left-0 w-0 h-1 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-};
+      </main>
 
-// Event Details Page Component - Updated to show event-specific coordinators
-const EventDetailsPage = ({ eventId, events, handleBackClick }) => {
-  // Find the current event
-  const currentEvent = events.find(event => event.id === eventId);
-  
-  // Event details data with common information
-  const eventDetails = {
-    date: "February 15, 2025",
-    time: "10:00 AM - 2:00 PM",
-    venue: "Computer Lab 1",
-    registrationDeadline: "February 1, 2025",
-    requirements: "Laptop with any preferred IDE installed",
-    teamSize: "2 members per team",
-    prizes: [
-      { place: "1st Place", amount: "₹10,000" },
-      { place: "2nd Place", amount: "₹3,000" },
-      { place: "3rd Place", amount: "₹2,000" }
-    ],
-    timeline: [
-      { date: "January 15, 2025", event: "Registration Opens" },
-      { date: "February 1, 2025", event: "Registration Closes" },
-      { date: "February 10, 2025", event: "Confirmation Emails Sent" },
-      { date: "February 15, 2025", event: "Event Day" },
-      { date: "February 15, 2025", event: "Results & Prize Distribution" }
-    ],
-    contacts: {
-      phone: "+91 9876543210",
-      email: "event@example.com",
-      website: "www.event-competition.com"
-    },
-    rules: [
-      "Competition Format: The competition consists of multiple rounds where participants identify and fix bugs in provided code snippets.",
-      "Team Composition: Each team must have exactly 2 members. Both team members must be present during the competition.",
-      "Timing: The competition will last for 4 hours. Teams must complete and submit their solutions within this timeframe.",
-      "Judging Criteria: Solutions will be judged based on correctness, efficiency, and code quality. Teams that solve more problems with fewer attempts will rank higher.",
-      "Resources: Teams are allowed to use documentation and reference materials, but not pre-written code or communication with people outside your team.",
-      "Programming Languages: Supported languages include Python, Java, C++, and JavaScript. Each team must stick to one language throughout the competition.",
-    ]
-  };
-
-  // State for toggling sections to make them compact
-  const [activeSection, setActiveSection] = useState('details');
-
-  return (
-    <div className="min-h-screen bg-slate-900">
-      {/* Fixed Header with Back Button - Improved for mobile */}
-      <div className="sticky top-0 z-50 bg-slate-800 py-3 px-4 shadow-md">
-        <div className="max-w-7xl mx-auto">
-          {/* Mobile-friendly header layout */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            {/* Title in center on mobile, left on desktop */}
-            <h1 className="text-2xl font-bold text-white order-1 sm:order-1">
-              {currentEvent?.title || "Event Details"}
-            </h1>
-            
-            {/* Buttons container - full width on mobile */}
-            <div className="flex w-full sm:w-auto gap-4 justify-between order-2 sm:order-2">
-                 {/* Back Button */}
+      {/* Event Details Modal */}
+      {isModalOpen && selectedEvent && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-start p-4 modal-overlay overflow-y-auto animate__animated animate__fadeIn">
+          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full my-8 animate__animated animate__zoomIn">
+            {/* Modal Header */}
+            <div className="relative">
+              <img 
+                src={selectedEvent.image} 
+                alt={selectedEvent.title} 
+                className="w-full h-64 object-cover rounded-t-lg"
+              />
+              <div className="absolute top-4 left-4 flex space-x-2">
                 <button 
-                  onClick={handleBackClick}
-                  className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-5 py-2.5 rounded-lg transition-colors duration-200 flex items-center font-medium shadow-sm border border-gray-200"
+                  onClick={closeModal}
+                  className="bg-white bg-opacity-80 text-gray-800 p-2 rounded-full hover:bg-opacity-100 transition duration-200 flex items-center transform hover:scale-105"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                  </svg>
-                  Back
+                  <i className="fas fa-arrow-left mr-1"></i> Back
                 </button>
-  
-                {/* Registration Button */}
-                <a 
-                  href={currentEvent?.registrationLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-lg transition-all duration-200 flex items-center shadow-md"
-                >
-                  Register
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+              </div>
+              <button 
+                onClick={closeModal}
+                className="absolute top-4 right-4 bg-white bg-opacity-80 text-gray-800 p-2 rounded-full hover:bg-opacity-100 transition duration-200 transform hover:scale-105"
+              >
+                <i className="fas fa-times"></i>
+              </button>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-900 to-transparent p-6">
+                <h3 className="text-3xl font-bold text-white">{selectedEvent.title}</h3>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Tabs Navigation - Scrollable for mobile */}
-      <div className="bg-slate-800 border-b border-slate-700 sticky top-16 z-40">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4">
-          <div className="flex overflow-x-auto py-1 no-scrollbar">
-            <button 
-              className={`py-2 px-3 font-medium transition-colors whitespace-nowrap ${activeSection === 'details' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setActiveSection('details')}
-            >
-              Details & Prizes
-            </button>
-            <button 
-              className={`py-2 px-3 font-medium transition-colors whitespace-nowrap ${activeSection === 'rules' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setActiveSection('rules')}
-            >
-              Rules
-            </button>
-            <button 
-              className={`py-2 px-3 font-medium transition-colors whitespace-nowrap ${activeSection === 'timeline' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setActiveSection('timeline')}
-            >
-              Timeline
-            </button>
-            <button 
-              className={`py-2 px-3 font-medium transition-colors whitespace-nowrap ${activeSection === 'contact' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
-              onClick={() => setActiveSection('contact')}
-            >
-              Contact
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Content Section - Only shows active section */}
-      <div className="container max-w-7xl mx-auto px-4 py-6">
-        {/* Event Details & Prizes Section */}
-        {activeSection === 'details' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Details */}
-            <div className="bg-slate-800 rounded-lg p-5">
-              <h2 className="text-xl font-bold text-purple-400 mb-3">Event Details</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            
+            {/* Modal Fixed Navigation - This is now fixed */}
+            <div className="sticky top-0 bg-white py-2 px-4 border-b z-20 shadow-md">
+              <div className="flex justify-around items-center">
+                <a 
+                  href="#event-details" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('event-details').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`text-${activeSection === 'event-details' ? 'purple-800 font-bold' : 'purple-600'} hover:text-purple-800 transition-all px-2 py-1 rounded ${activeSection === 'event-details' ? 'border-b-2 border-purple-800' : ''}`}
+                >
+                  Event Details
+                </a>
+                <a 
+                  href="#prize-pool" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('prize-pool').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`text-${activeSection === 'prize-pool' ? 'purple-800 font-bold' : 'purple-600'} hover:text-purple-800 transition-all px-2 py-1 rounded ${activeSection === 'prize-pool' ? 'border-b-2 border-purple-800' : ''}`}
+                >
+                  Prize Pool
+                </a>
+                <a 
+                  href="#rules" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('rules').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`text-${activeSection === 'rules' ? 'purple-800 font-bold' : 'purple-600'} hover:text-purple-800 transition-all px-2 py-1 rounded ${activeSection === 'rules' ? 'border-b-2 border-purple-800' : ''}`}
+                >
+                  Rules
+                </a>
+                <a 
+                  href="#timeline" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`text-${activeSection === 'timeline' ? 'purple-800 font-bold' : 'purple-600'} hover:text-purple-800 transition-all px-2 py-1 rounded ${activeSection === 'timeline' ? 'border-b-2 border-purple-800' : ''}`}
+                >
+                  Timeline
+                </a>
+                {/* <a 
+                  href="#contacts" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`text-${activeSection === 'contacts' ? 'purple-800 font-bold' : 'purple-600'} hover:text-purple-800 transition-all px-2 py-1 rounded ${activeSection === 'contacts' ? 'border-b-2 border-purple-800' : ''}`}
+                >
+                  Contacts
+                </a> */}
+              </div>
+            </div>
+            
+            {/* Modal Content - Adding class for scroll tracking */}
+            <div className="p-6 overflow-y-auto max-h-screen modal-content">
+              {/* Basic Details */}
+              <div id="event-details" className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 animate__animated animate__fadeIn">
                 <div>
-                  <p className="mb-2"><span className="font-semibold text-white">Date:</span> {eventDetails.date}</p>
-                  <p className="mb-2"><span className="font-semibold text-white">Time:</span> {eventDetails.time}</p>
-                  <p className="mb-2"><span className="font-semibold text-white">Venue:</span> {eventDetails.venue}</p>
+                  <h4 className="text-xl font-bold mb-3 text-purple-800">Event Details</h4>
+                  <p className="text-gray-700 mb-1"><span className="font-semibold">Date:</span> {selectedEvent.details.date}</p>
+                  <p className="text-gray-700 mb-1"><span className="font-semibold">Time:</span> {selectedEvent.details.time}</p>
+                  <p className="text-gray-700 mb-1"><span className="font-semibold">Venue:</span> {selectedEvent.details.venue}</p>
+                  <p className="text-gray-700 mb-1"><span className="font-semibold">Registration Deadline:</span> {selectedEvent.details.registrationDeadline}</p>
+                  <p className="text-gray-700 mb-1"><span className="font-semibold">Team Size:</span> {selectedEvent.details.teamSize}</p>
+                  <p className="text-gray-700 mb-1"><span className="font-semibold">Requirements:</span> {selectedEvent.details.requirements}</p>
                 </div>
+                
+                {/* Coordinators Section */}
                 <div>
-                  <p className="mb-2"><span className="font-semibold text-white">Requirements:</span> {eventDetails.requirements}</p>
-                  <p className="mb-2"><span className="font-semibold text-white">Team Size:</span> {eventDetails.teamSize}</p>
-                  <p className="mb-2"><span className="font-semibold text-white">Deadline:</span> {eventDetails.registrationDeadline}</p>
+                  <h4 className="text-xl font-bold mb-3 text-purple-800">Event Coordinators</h4>
+                  <div className="flex flex-wrap gap-4">
+                    {selectedEvent.coordinators.map((coordinator, index) => (
+                      <div 
+                        key={index} 
+                        className="flex items-center bg-purple-50 p-2 rounded-lg transition-all hover:shadow-md transform hover:scale-105"
+                      >
+                        <img
+                          src={coordinator.image}
+                          alt={coordinator.name}
+                          className="w-12 h-12 rounded-full object-cover mr-3"
+                          loading="lazy"
+                        />
+                        <div>
+                          <p className="font-semibold text-purple-800">{coordinator.name}</p>
+                          <p className="text-gray-600 text-sm">{coordinator.role}</p>
+                          <p className="text-purple-600 text-sm">{coordinator.email}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
               
-              <h3 className="text-lg font-semibold text-white mt-4 mb-2">Skills</h3>
-              <div className="flex flex-wrap gap-2 mb-2">
-                <span className="bg-purple-700 text-white px-2 py-1 rounded-full text-sm">Problem Solving</span>
-                <span className="bg-purple-700 text-white px-2 py-1 rounded-full text-sm">Debugging</span>
-                <span className="bg-purple-700 text-white px-2 py-1 rounded-full text-sm">Algorithms</span>
-                <span className="bg-purple-700 text-white px-2 py-1 rounded-full text-sm">Code Optimization</span>
-              </div>
-            </div>
-            
-            {/* Prizes */}
-            <div className="bg-slate-800 rounded-lg p-5">
-              <h2 className="text-xl font-bold text-purple-400 mb-3">Prizes</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {eventDetails.prizes.map((prize, index) => (
-                  <div key={index} className="text-center bg-slate-700 rounded-lg p-3">
-                    <h3 className="text-white font-medium">{prize.place}</h3>
-                    <div className="text-xl font-bold text-purple-400">{prize.amount}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-        
-        {/* Rules Section */}
-        {activeSection === 'rules' && (
-          <div className="bg-slate-800 rounded-lg p-5">
-            <h2 className="text-xl font-bold text-purple-400 mb-3">Event Rules & Guidelines</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {eventDetails.rules.map((rule, index) => (
-                <div key={index} className="bg-slate-700/50 p-3 rounded-lg">
-                  <p className="text-gray-300">
-                    <span className="font-semibold text-white">{rule.split(':')[0]}:</span>
-                    {rule.includes(':') ? rule.split(':')[1] : rule}
-                  </p>
+              {/* Prize Pool Section */}
+              <div id="prize-pool" className="mb-6 pt-4 animate__animated animate__fadeIn">
+                <h4 className="text-xl font-bold mb-3 text-purple-800">Prize Pool</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                  {selectedEvent.details.prizes.map((prize, index) => (
+                    <div 
+                      key={index} 
+                      className="bg-purple-50 p-4 rounded-lg text-center transform transition-transform hover:scale-105 hover:shadow-lg"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <p className="font-bold text-purple-800">{prize.place}</p>
+                      <p className="text-2xl font-bold text-green-600">{prize.amount}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
-        
-        {/* Timeline Section */}
-        {activeSection === 'timeline' && (
-          <div className="bg-slate-800 rounded-lg p-5">
-            <h2 className="text-xl font-bold text-purple-400 mb-4">Event Timeline</h2>
-            <div className="relative border-l-2 border-purple-500 ml-2 pl-6 pb-2">
-              {eventDetails.timeline.map((item, index) => (
-                <div key={index} className="mb-6 relative">
-                  <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-8 top-1"></div>
-                  <div className="font-semibold text-purple-300">{item.date}</div>
-                  <div className="text-gray-300">{item.event}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-        
-        {/* Contact Section with Coordinator Images - Now showing event-specific coordinators */}
-        {activeSection === 'contact' && (
-          <div className="bg-slate-800 rounded-lg p-5">
-            <h2 className="text-xl font-bold text-purple-400 mb-4">Contact Information</h2>
-            
-            {/* General Contact Info */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="flex items-center">
-                <div className="text-purple-400 text-lg mr-3">
-                  <i className="fas fa-phone"></i>
-                </div>
-                <span className="text-gray-300">{eventDetails.contacts.phone}</span>
               </div>
-              <div className="flex items-center">
-                <div className="text-purple-400 text-lg mr-3">
-                  <i className="fas fa-envelope"></i>
-                </div>
-                <span className="text-gray-300">{eventDetails.contacts.email}</span>
+              
+              {/* Rules Section */}
+              <div id="rules" className="mb-6 pt-4 animate__animated animate__fadeIn">
+                <h4 className="text-xl font-bold mb-3 text-purple-800">Rules</h4>
+                <ul className="space-y-2">
+                {selectedEvent.details.rules.map((rule, index) => (
+                    <li 
+                      key={index} 
+                      className="flex items-start p-2 hover:bg-purple-50 rounded-md transition-colors"
+                    >
+                      <i className="fas fa-check-circle text-purple-600 mt-1 mr-2"></i>
+                      <span className="text-gray-700">{rule}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="flex items-center">
-                <div className="text-purple-400 text-lg mr-3">
-                  <i className="fas fa-globe"></i>
+              
+              {/* Required Skills Section */}
+              <div className="mb-6 pt-4 animate__animated animate__fadeIn">
+                <h4 className="text-xl font-bold mb-3 text-purple-800">Required Skills</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedEvent.details.skills.map((skill, index) => (
+                    <span 
+                      key={index} 
+                      className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
-                <span className="text-gray-300">{eventDetails.contacts.website}</span>
               </div>
-            </div>
-            
-            {/* Event Coordinators with Images - Now using event-specific coordinators */}
-            <h3 className="text-lg font-semibold text-white mb-4">Event Coordinators</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {currentEvent?.coordinators.map((coordinator, index) => (
-                <div key={index} className="bg-slate-700 rounded-lg p-4 flex flex-col items-center text-center">
-                  {/* Coordinator Image */}
-                  <div className="w-24 h-24 rounded-full overflow-hidden mb-3 ring-2 ring-purple-500">
-                    <img 
-                      src={coordinator.image} 
-                      alt={coordinator.name} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+              
+              {/* Timeline Section */}
+              <div id="timeline" className="mb-6 pt-4 animate__animated animate__fadeIn">
+                <h4 className="text-xl font-bold mb-3 text-purple-800">Event Timeline</h4>
+                <div className="relative">
+                  {/* Timeline line */}
+                  <div className="absolute left-9 top-0 h-full w-0.5 bg-purple-200"></div>
                   
-                  {/* Coordinator Details */}
-                  <h4 className="text-white font-semibold text-lg">{coordinator.name}</h4>
-                  <p className="text-purple-300 mb-2">{coordinator.role}</p>
-                  <p className="text-gray-400 text-sm mb-3">{coordinator.email}</p>
-                  
-                  {/* Contact Button */}
-                  <a 
-                    href={`mailto:${coordinator.email}`} 
-                    className="bg-purple-700 hover:bg-purple-800 text-white px-3 py-1 rounded-md text-sm transition-colors duration-300"
-                  >
-                    Contact <i className="fas fa-envelope ml-1"></i>
-                  </a>
+                  {/* Timeline items */}
+                  {selectedEvent.details.timeline.map((item, index) => (
+                    <div 
+                      key={index} 
+                      className="relative pl-20 pb-6 animate__animated animate__fadeInLeft"
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                    >
+                      {/* Timeline dot */}
+                      <div className="absolute left-7 top-1 w-5 h-5 bg-purple-600 border-4 border-purple-100 rounded-full"></div>
+                      <p className="absolute left-0 top-0 text-sm text-purple-800 font-semibold">{item.date.split(" ")[0]}</p>
+                      <div className="bg-purple-50 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <p className="text-gray-700">{item.event}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            {/* Social Media Links */}
-            <div className="mt-6 text-center">
-              <h4 className="text-white font-medium mb-3">Follow us on social media</h4>
-              <div className="flex justify-center space-x-4">
-                <a href="#" className="bg-purple-700 hover:bg-purple-800 text-white p-3 rounded-full transition-colors">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" className="bg-purple-700 hover:bg-purple-800 text-white p-3 rounded-full transition-colors">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#" className="bg-purple-700 hover:bg-purple-800 text-white p-3 rounded-full transition-colors">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="bg-purple-700 hover:bg-purple-800 text-white p-3 rounded-full transition-colors">
-                  <i className="fab fa-linkedin-in"></i>
+              </div>
+              
+              {/* Contact Information */}
+              {/* <div id="contacts" className="mb-6 pt-4 animate__animated animate__fadeIn">
+                <h4 className="text-xl font-bold mb-3 text-purple-800">Contact Information</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-purple-50 p-4 rounded-lg transform transition-transform hover:scale-105">
+                    <div className="flex items-center mb-2">
+                      <i className="fas fa-phone text-purple-600 mr-2"></i>
+                      <span className="font-semibold text-purple-800">Phone</span>
+                    </div>
+                    <p className="text-gray-700">{selectedEvent.details.contacts.phone}</p>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded-lg transform transition-transform hover:scale-105">
+                    <div className="flex items-center mb-2">
+                      <i className="fas fa-envelope text-purple-600 mr-2"></i>
+                      <span className="font-semibold text-purple-800">Email</span>
+                    </div>
+                    <p className="text-gray-700">{selectedEvent.details.contacts.email}</p>
+                  </div>
+                  <div className="bg-purple-50 p-4 rounded-lg transform transition-transform hover:scale-105">
+                    <div className="flex items-center mb-2">
+                      <i className="fas fa-globe text-purple-600 mr-2"></i>
+                      <span className="font-semibold text-purple-800">Website</span>
+                    </div>
+                    <p className="text-gray-700">{selectedEvent.details.contacts.website}</p>
+                  </div>
+                </div>
+              </div> */}
+              
+              {/* Registration Button */}
+              <div className="text-center py-4 mt-4 animate__animated animate__fadeInUp">
+                <a 
+                  href={selectedEvent.registrationLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-purple-800 text-white font-bold py-3 px-8 rounded-full hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-md"
+                >
+                  Register for {selectedEvent.title}
                 </a>
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
+      
+    
     </div>
   );
 };
 
 export default App;
-
-
