@@ -73,17 +73,22 @@ const Navbar = () => {
         <div className={`absolute bottom-8 right-8 flex space-x-6 transition-all duration-500 ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`} style={{ transitionDelay: '700ms' }}>
-          {['Facebook', 'Instagram', 'Youtube'].map((social, index) => (
-            <a 
-              key={index}
-              href={`https://${social.toLowerCase()}.com`} 
-              className="text-white hover:text-indigo-300 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {social}
-            </a>
-          ))}
+          <a 
+            href="https://twitch.com" 
+            className="text-white hover:text-indigo-300 transition-colors"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Twitch
+          </a>
+          <a 
+            href="https://www.instagram.com/oscillation_2025/" 
+            className="text-white hover:text-indigo-300 transition-colors"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
         </div>
       </div>
     </div>
