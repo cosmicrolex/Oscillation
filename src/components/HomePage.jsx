@@ -253,8 +253,14 @@ const HomePage = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                   >
                     <img 
+                      src={logo_white}
+                      alt="First Logo"
+                      className="w-14 h-14 object-contain"
+                    />
+                      
+                    <img 
                       src={logo_white} 
-                      alt="Company Logo" 
+                      alt="Second Logo" 
                       className="w-14 h-14 object-contain" // Reduced from w-16 h-16 to w-14 h-14
                     />
                     <img 
@@ -274,7 +280,19 @@ const HomePage = () => {
                     >
                       <img 
                         src={logo_white} 
-                        alt="Company Logo" 
+                        alt="First Logo" 
+                        className="w-24 h-24 object-contain" 
+                      />
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      className="mr-6 hidden sm:block" // Hide on mobile, show on sm screens and up
+                    >
+                      <img 
+                        src={logo_white} 
+                        alt="Second Logo" 
                         className="w-24 h-24 object-contain" 
                       />
                     </motion.div>
@@ -399,7 +417,19 @@ const HomePage = () => {
                       <div className="w-full md:w-2/3 text-left">
                         <div className="bg-black/30 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-pink-500/20 shadow-lg shadow-pink-500/10">
                           <p className="text-gray-200 leading-relaxed text-base sm:text-lg md:text-xl font-light tracking-wide" style={{ fontFamily: "'Quicksand', sans-serif" }}>
-                            <span className="font-semibold text-pink-300">Oscillation 2K25</span>, the premier tech event by AI & Data Science, VPPCOEVA, unites <span className="font-medium text-indigo-300">coders, innovators,</span> and tech enthusiasts. Featuring <span className="font-medium text-pink-300">Code Relay 2.0</span>, project reviews, hackathons, and the electrifying <span className="font-medium text-indigo-300">Tech Roast Battle</span>, it challenges participants to excel, collaborate, and showcase their skills. Organized entirely by students, Oscillation 2K25 is the ultimate platform to learn, compete, and innovate.
+                          <span className="font-semibold text-pink-300">Oscillation 2K25</span>, the premier tech event by AI & Data Science, VPPCOEVA, unites <span className="font-medium text-indigo-300">coders, innovators,</span> and tech enthusiasts. Featuring  
+                            <span className="font-medium text-yellow-300"> Code Relay 2.0</span>,  
+                            <span className="font-medium text-yellow-300"> Hackathon</span>,  
+                            <span className="font-medium text-yellow-300"> Valorant</span>,  
+                            <span className="font-medium text-yellow-300"> Treasure Hunt</span>,  
+                            <span className="font-medium text-yellow-300"> Project Presentation</span>,  
+                            <span className="font-medium text-yellow-300"> BGMI</span>,  
+                            <span className="font-medium text-yellow-300"> Carrom Clash</span>,  
+                            <span className="font-medium text-yellow-300"> Code and Pray</span>,  
+                            <span className="font-medium text-yellow-300"> Dumb Charades</span>,  
+                            <span className="font-medium text-yellow-300"> AI Visionary</span>, and  
+                            <span className="font-medium text-yellow-300"> Ludo</span>,  
+                            it challenges participants to excel, collaborate, and showcase their skills. Organized entirely by students, Oscillation 2K25 is the ultimate platform to learn, compete, and innovate.
                           </p>
                         </div>
                         
@@ -412,7 +442,7 @@ const HomePage = () => {
                         >
                           {[
                             { name: "CODE RELAY 2.0", icon: "🧩" },
-                            { name: "TECH ROAST BATTLE", icon: "🔥" },
+                            { name: "AI VISIONARY", icon: "🔥" },
                             { name: "HACKATHON", icon: "💻" }
                           ].map((event, index) => (
                             <motion.div
